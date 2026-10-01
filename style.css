@@ -1,0 +1,160 @@
+:root {
+    --deep-maroon: #3B080D;
+    --dark-burgundy: #541017;
+    --maroon: #741F27;
+    --rose-maroon: #9E3D45;
+    --dusty-rose: #C98282;
+    --cream: #F3E2D3;
+    --soft-cream: #E8D0BF;
+    --dark-text: #351519;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--deep-maroon);
+    color: var(--cream);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hitung-mundur {
+    display: flex;
+    width: 80%;
+}
+
+.kotak-waktu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-burgundy);
+    height: 90vh;
+    width: 85%;
+
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1px solid var(--maroon);
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.kotak-hari,
+.kotak-jam,
+.kotak-menit,
+.kotak-detik {
+    margin: 0 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 90px;
+    border-color: var(--dusty-rose);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hari,
+.jam,
+.menit,
+.detik {
+    font-size: 30px;
+}
+
+.atas-lock {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    font-family: 'Caveat', cursive;
+}
+
+.tombol-lock {
+    background-color: var(--rose-maroon);
+    border: 1px solid var(--maroon);
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+.tombol-lock:hover{
+    background-color: var(--soft-cream);
+}
+.heading {
+    font-family: 'Caveat', cursive;
+}
+
+.teks {
+    font-family: cursive;
+    text-align: center;
+}
+
+.buka-kartu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
+
+.buka-kartu:not(.hidden) {
+    animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pembungkus-kartu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-burgundy);
+    align-items: center;
+    height: 90vh;
+    width: 85%;
+    border: 0.1px solid var(--maroon);
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.gambar .gambar1 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+.teksnya{
+    text-align: center;
+    margin: 0 10px;
+    font-size: 18px;
+}
+.nav-atas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    font-family: cursive;
+}
+.hadiah{
+    font-family: cursive;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
